@@ -172,7 +172,7 @@ export default function Loader({ onComplete }: LoaderProps) {
           textTransform: "uppercase",
         }}
       >
-        Etuudiant Réseau 
+        Etudiant Reseau 
       </div>
       <div
         style={{
