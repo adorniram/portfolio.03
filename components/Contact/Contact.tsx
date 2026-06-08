@@ -118,9 +118,9 @@ export default function Contact() {
           {/* Social links */}
           <div className="contact-fade" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
             {[
-              { icon: <FiMail />, label: "adoram@email.com", href: "mailto:adoram@email.com" },
+              { icon: <FiMail />, label: "adoramzerty@email.com", href: "mailto:adoramzerty@email.com" },
               { icon: <FiLinkedin />, label: "linkedin.com/in/adoram", href: "#" },
-              { icon: <FiGithub />, label: "github.com/adoram", href: "#" },
+              { icon: <FiGithub />, label: "https://github.com/adorniram", href: "#" },
             ].map((link) => (
               <a
                 key={link.label}

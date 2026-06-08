@@ -92,7 +92,7 @@ export default function Footer() {
             }}
           >
             <FiMail size={14} />
-            adoram@email.com
+            adoramzerty@email.com
           </a>
         </div>
       </div>
@@ -122,7 +122,7 @@ export default function Footer() {
             className="font-mono"
             style={{ fontSize: "11px", color: "#444", letterSpacing: "0.1em" }}
           >
-            © 2025 Adoram — Tous droits réservés
+            © 2026 Adoram — Tous droits réservés
           </span>
         </div>
 

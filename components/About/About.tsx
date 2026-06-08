@@ -200,8 +200,8 @@ export default function About() {
             }}
           >
             {[
-              { num: "3+", label: "Années d'étude" },
-              { num: "10+", label: "Projets réalisés" },
+              { num: "2+", label: "Années d'étude" },
+              { num: "5+", label: "Projets réalisés" },
               { num: "∞", label: "Curiosité" },
             ].map((stat) => (
               <div key={stat.label}>

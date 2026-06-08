@@ -141,7 +141,7 @@ export default function Hero() {
             className="font-mono"
             style={{ fontSize: "11px", letterSpacing: "0.3em", color: "#c8a96e", textTransform: "uppercase" }}
           >
-            Portfolio 2025
+            Portfolio 2026
           </span>
         </div>
 
@@ -191,7 +191,7 @@ export default function Hero() {
               textTransform: "uppercase",
             }}
           >
-            Cyber Activist &amp; Full Stack Developer
+            étudiant réseau &amp; sécurité informatique
           </span>
 
           <div style={{ display: "flex", gap: "12px" }}>
