@@ -6,7 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const navLinks = ["A propos de", "Projet", "Parcours", "Contacts"];
+const navLinks = [
+  { label: "A propos de", target: "about" },
+  { label: "Projet", target: "projects" },
+  { label: "Parcours", target: "timeline" },
+  { label: "Contacts", target: "contact" },
+];
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
@@ -29,8 +34,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id.toLowerCase());
+  const scrollToSection = (target: string) => {
+    const el = document.getElementById(target);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -86,8 +91,8 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <button
-              key={link}
-              onClick={() => scrollToSection(link)}
+              key={link.target}
+              onClick={() => scrollToSection(link.target)}
               style={{
                 fontFamily: "'DM Mono', monospace",
                 fontSize: "11px",
@@ -109,7 +114,7 @@ export default function Navbar() {
                 (e.target as HTMLButtonElement).style.color = "#888";
               }}
             >
-              {link}
+              {link.label}
             </button>
           ))}
         </div>
@@ -179,8 +184,8 @@ export default function Navbar() {
       >
         {navLinks.map((link, i) => (
           <button
-            key={link}
-            onClick={() => scrollToSection(link)}
+            key={link.target}
+            onClick={() => scrollToSection(link.target)}
             style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(32px, 8vw, 64px)",
@@ -195,7 +200,7 @@ export default function Navbar() {
               transition: `transform 0.5s ease ${i * 0.08}s, opacity 0.5s ease ${i * 0.08}s`,
             }}
           >
-            {link}
+            {link.label}
           </button>
         ))}
       </div>
