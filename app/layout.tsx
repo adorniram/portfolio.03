@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Adoram — Cyber Activist & Full Stack Developer",
   description: "Portfolio personnel — Cybersécurité, Réseaux, Développement Web",
   keywords: ["cybersécurité", "développement web", "portfolio", "full stack", "réseaux"],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    minimumScale: 1,
+  },
 };
 
 export default function RootLayout({

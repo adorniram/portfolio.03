@@ -67,6 +67,7 @@ function ProjectRow({ project, index }: { project: (typeof projects)[0]; index: 
   return (
     <div
       ref={rowRef}
+      className="project-row"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -193,7 +194,13 @@ export default function Projects() {
         </div>
       </div>
 
-      <style>{`@media (max-width: 768px) { section#projects { padding: 100px 24px !important; } }`}</style>
+      <style>{`
+        @media (max-width: 900px) {
+          section#projects { padding: 100px 24px !important; }
+          .project-row { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .project-row a { align-self: flex-start !important; margin-top: 16px !important; }
+        }
+      `}</style>
     </section>
   );
 }

@@ -118,6 +118,7 @@ export default function Hero() {
 
       {/* Content */}
       <div
+        className="hero-content"
         style={{
           position: "relative",
           zIndex: 10,
@@ -173,6 +174,7 @@ export default function Hero() {
         {/* Subtitle row */}
         <div
           ref={subtitleRef}
+          className="hero-subtitle"
           style={{
             display: "flex",
             alignItems: "center",
@@ -194,7 +196,7 @@ export default function Hero() {
             étudiant réseau &amp; sécurité informatique
           </span>
 
-          <div style={{ display: "flex", gap: "12px" }}>
+          <div className="hero-tags" style={{ display: "flex", gap: "12px" }}>
             <span className="tag">Cybersécurité</span>
             <span className="tag">Réseaux</span>
             <span className="tag">Web</span>
@@ -205,6 +207,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
+        className="hero-scroll-indicator"
         style={{
           position: "absolute",
           bottom: "40px",
@@ -244,7 +247,31 @@ export default function Hero() {
           50% { opacity: 1; transform: scaleY(0.5); }
         }
         @media (max-width: 768px) {
-          section#hero > div { padding: 0 24px 64px !important; }
+          section#hero {
+            align-items: flex-start !important;
+            min-height: min(700px, 100vh) !important;
+            padding-top: 32px !important;
+          }
+
+          .hero-content {
+            padding: 0 24px 64px !important;
+          }
+
+          .hero-subtitle {
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+          }
+
+          .hero-tags {
+            flex-wrap: wrap !important;
+            gap: 10px !important;
+          }
+
+          .hero-scroll-indicator {
+            right: 24px !important;
+            bottom: 24px !important;
+          }
         }
       `}</style>
     </section>

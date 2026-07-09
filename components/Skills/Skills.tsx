@@ -180,7 +180,7 @@ export default function Skills() {
     >
       <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
         {/* Header */}
-        <div style={{ marginBottom: "80px", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px" }}>
+        <div className="skills-header" style={{ marginBottom: "80px", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
               <div style={{ width: "40px", height: "1px", background: "#c8a96e" }} />
@@ -229,8 +229,17 @@ export default function Skills() {
       </div>
 
       <style>{`
-        @media (max-width: 1100px) { .skills-grid { grid-template-columns: 1fr 1fr !important; } }
-        @media (max-width: 640px) { .skills-grid { grid-template-columns: 1fr !important; } section#skills { padding: 100px 24px !important; } }
+        @media (max-width: 1100px) {
+          .skills-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 900px) {
+          .skills-header { flex-direction: column !important; align-items: flex-start !important; gap: 18px !important; }
+          .skills-header p { max-width: 100% !important; }
+        }
+        @media (max-width: 640px) {
+          .skills-grid { grid-template-columns: 1fr !important; }
+          section#skills { padding: 100px 24px !important; }
+        }
       `}</style>
     </section>
   );

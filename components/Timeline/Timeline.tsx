@@ -131,6 +131,7 @@ export default function Timeline() {
           {/* Center line */}
           <div
             ref={lineRef}
+            className="center-line"
             style={{
               position: "absolute",
               left: "50%",
@@ -152,11 +153,29 @@ export default function Timeline() {
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
           section#timeline { padding: 100px 24px !important; }
-          .timeline-wrapper { padding-left: 40px !important; padding-right: 0 !important; text-align: left !important; }
-          .timeline-dot { left: -32px !important; right: auto !important; }
-          .center-line { left: 20px !important; }
+          .timeline-item {
+            display: block !important;
+            margin-bottom: 40px !important;
+          }
+          .timeline-wrapper {
+            padding: 0 !important;
+            text-align: left !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+          }
+          .timeline-dot-container {
+            margin: 0 0 20px 20px !important;
+            justify-content: flex-start !important;
+          }
+          .timeline-dot {
+            left: auto !important;
+            right: auto !important;
+          }
+          .center-line {
+            left: 20px !important;
+          }
         }
       `}</style>
     </section>
@@ -196,8 +215,8 @@ function TimelineItem({
       </div>
 
       {/* Center dot */}
-      <div style={{ display: "flex", justifyContent: "center", paddingTop: "8px" }}>
-        <div
+      <div className="timeline-dot-container" style={{ display: "flex", justifyContent: "center", paddingTop: "8px" }}>
+        <div className="timeline-dot"
           style={{
             width: "12px",
             height: "12px",
@@ -212,6 +231,7 @@ function TimelineItem({
 
       {/* Right content */}
       <div
+        className={`timeline-wrapper ${!isLeft ? "right" : "empty"}`}
         style={{
           paddingLeft: !isLeft ? "48px" : "0",
           opacity: !isLeft ? 1 : 0,

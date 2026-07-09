@@ -236,6 +236,18 @@ export default function About() {
             gap: 48px !important;
           }
           section#about { padding: 100px 24px !important; }
+          .about-grid > div:first-child {
+            max-height: 520px !important;
+          }
+          .about-grid > div:last-child {
+            padding-left: 0 !important;
+          }
+          .about-grid h2 {
+            font-size: clamp(32px, 6vw, 48px) !important;
+          }
+          .about-grid p {
+            max-width: 100% !important;
+          }
         }
       `}</style>
     </section>
